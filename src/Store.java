@@ -15,7 +15,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public abstract class Store implements StoreCapable {
-	private String filename = "xmlflie.xml";
+	private String filename = "xmlfile.xml";
 
 	protected abstract void storeProduct(Product product);
 
