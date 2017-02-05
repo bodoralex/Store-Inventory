@@ -1,9 +1,8 @@
-
 public abstract class Product {
 	private String name;
 	private Integer price;
-	
-	public Product(String name, int price){
+
+	public Product(String name, int price) {
 		this.name = name;
 		this.price = price;
 	}
@@ -23,5 +22,5 @@ public abstract class Product {
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
-	
+
 }

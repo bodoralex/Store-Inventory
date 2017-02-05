@@ -1,6 +1,5 @@
+public class BookProduct extends Product {
 
-public class BookProduct extends Product{
-	
 	private int pageSize;
 
 	public BookProduct(String name, int price, int pageSize) {
@@ -15,6 +14,5 @@ public class BookProduct extends Product{
 	public void setPageSize(int pageSize) {
 		this.pageSize = pageSize;
 	}
-	
 
 }

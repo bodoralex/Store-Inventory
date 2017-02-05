@@ -1,9 +1,8 @@
-
 public class CDProduct extends Product {
 
 	private int numOfTracks;
 
-	public CDProduct(String name, int price,int numOfTracks) {
+	public CDProduct(String name, int price, int numOfTracks) {
 		super(name, price);
 		this.setNumOfTracks(numOfTracks);
 	}
@@ -15,6 +14,5 @@ public class CDProduct extends Product {
 	public void setNumOfTracks(int numOfTracks) {
 		this.numOfTracks = numOfTracks;
 	}
-	
 
 }

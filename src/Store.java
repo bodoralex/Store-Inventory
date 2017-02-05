@@ -25,14 +25,12 @@ public abstract class Store implements StoreCapable {
 	public void storeCDProduct(String name, int price, int size) {
 		Product cd = createProduct("CD", name, price, size);
 		store(cd);
-
 	}
 
 	@Override
 	public void storeBookProduct(String name, int price, int size) {
 		Product book = createProduct("Book", name, price, size);
 		store(book);
-
 	}
 
 	public void saveToXml(Product product) {
@@ -59,16 +57,14 @@ public abstract class Store implements StoreCapable {
 			elem.setAttributeNode(price);
 			price.setValue(product.getPrice().toString());
 			Attr productType = doc.createAttribute("Type");
-			if(product instanceof CDProduct){
+			if (product instanceof CDProduct) {
 				elem.setAttributeNode(productType);
 				productType.setValue("CD");
 			}
-			if(product instanceof BookProduct){
+			if (product instanceof BookProduct) {
 				elem.setAttributeNode(productType);
 				productType.setValue("Book");
-				
 			}
-			
 			TransformerFactory transformerF = TransformerFactory.newInstance();
 			Transformer transformer = transformerF.newTransformer();
 			DOMSource domSource = new DOMSource(doc);
@@ -83,7 +79,6 @@ public abstract class Store implements StoreCapable {
 		Product product = null;
 		if (type.equals("CD")) {
 			product = new CDProduct(name, price, size);
-
 		} else if (type.equals("Book")) {
 			product = new BookProduct(name, price, size);
 		}
@@ -107,9 +102,7 @@ public abstract class Store implements StoreCapable {
 				Product product = createProduct(ProductType, name, price, 0);
 				products.add(product);
 			}
-
 		} catch (Exception e) {
-
 			e.printStackTrace();
 		}
 		return products;
@@ -119,5 +112,4 @@ public abstract class Store implements StoreCapable {
 		storeProduct(product);
 		saveToXml(product);
 	}
-
 }
